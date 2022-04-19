@@ -7,7 +7,7 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: 'email' }%>
+                input_html: { autocomplete: 'email' } %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -15,12 +15,9 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: 'new-password' } %>
-    <%= f.input :name,
-                require: true %>
-    <%= f.input :nickname,
-                require: false %>
-    <%= f.input :birthday,
-                require: false %>
+    <%= f.input :name, required: true %>
+    <%= f.input :nickname, required: false %>
+    <%= f.input :birthday, required: true %>
   </div>
 
   <div class="form-actions">

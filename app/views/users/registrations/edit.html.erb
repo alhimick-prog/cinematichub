@@ -17,12 +17,9 @@
     <%= f.input :password_confirmation,
                 required: false,
                 input_html: { autocomplete: 'new-password' } %>
-    <%= f.input :name,
-                require: true %>
-    <%= f.input :nickname,
-                require: false %>
-    <%= f.input :birthday,
-                require: false %>
+    <%= f.input :name, required: true %>
+    <%= f.input :nickname, required: false %>
+    <%= f.input :birthday, required: false %>
     <%= f.input :current_password,
                 hint: 'we need your current password to confirm your changes',
                 required: true,
