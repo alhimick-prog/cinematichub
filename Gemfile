@@ -14,7 +14,6 @@ gem 'pg', '~> 1.3', '>= 1.3.5'
 gem 'puma', '~> 5.0'
 gem 'pundit', '~> 2.2'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
-gem 'rubocop-rails', '~> 2.14', '>= 2.14.2'
 gem 'sass-rails', '>= 6'
 gem 'simple_form', '~> 5.1'
 gem 'turbolinks', '~> 5'
@@ -28,10 +27,12 @@ group :development, :test do
 end
 
 group :development do
+  gem 'erb_lint', '~> 0.1.1'
   gem 'listen', '~> 3.7', '>= 3.7.1'
   gem 'pry', '~> 0.14.1'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rubocop-rails', '~> 2.14', '>= 2.14.2'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end
