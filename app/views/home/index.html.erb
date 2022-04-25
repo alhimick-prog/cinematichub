@@ -1,0 +1,18 @@
+<div class="container" style="width:100%" >
+  <div class="row" style="width:100%" >
+    <% @action_movies.each_with_index do |film| %>
+      <div class="col" style="width:100% height:100%" >
+        <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%" > 
+        <div class='col'><%= film.title =%></div>
+      </div>
+    <% end %>
+  </div>
+  <div class="row" style="width:100%" >
+    <% @westerns.each_with_index do |film| %>
+      <div class="col" style="width:100% height:100%" >
+        <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%" > 
+        <div class='col'><%= film.title =%></div>
+      </div>
+    <% end %>
+  </div>
+</div>
