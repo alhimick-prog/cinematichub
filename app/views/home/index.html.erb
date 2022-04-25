@@ -1,18 +1,54 @@
-<div class="container" style="width:100%" >
-  <div class="row" style="width:100%" >
-    <% @action_movies.each_with_index do |film| %>
-      <div class="col" style="width:100% height:100%" >
-        <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%" > 
-        <div class='col'><%= film.title =%></div>
-      </div>
-    <% end %>
+<div class="container" style="width=100%">
+  <div class="row">
+    <div class="row">
+      <h2>Action movie</h2>
+    </div>
+    <div class="row">
+      <% @action_movies.each_with_index do |film| %>
+        <div class="col">
+          <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
+          <div class='col'><%= film.title %></div>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div class="row" style="width:100%" >
-    <% @westerns.each_with_index do |film| %>
-      <div class="col" style="width:100% height:100%" >
-        <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%" > 
-        <div class='col'><%= film.title =%></div>
-      </div>
-    <% end %>
+  <div class="row">
+    <div class="row">
+      <h2>Westerns</h2>
+    </div>
+    <div class="row">
+      <% @westerns.each_with_index do |film| %>
+        <div class="col">
+          <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
+          <div class='col'><%= film.title %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row">
+      <h2>Gangsters</h2>
+    </div>
+    <div class="row">
+      <% @gangsters.each_with_index do |film| %>
+        <div class="col">
+          <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
+          <div class='col'><%= film.title %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row">
+      <h2>Detectives</h2>
+    </div>
+    <div class="row">
+      <% @detectives.each_with_index do |film| %>
+        <div class="col">
+          <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
+          <div class='col'><%= film.title %></div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

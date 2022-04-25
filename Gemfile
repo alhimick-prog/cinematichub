@@ -32,6 +32,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'erb_lint', '~> 0.1.1'
   gem 'listen', '~> 3.7', '>= 3.7.1'
   gem 'pry', '~> 0.14.1'
   gem 'pry-rails', '~> 0.3.9'
