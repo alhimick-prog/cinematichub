@@ -4,61 +4,61 @@
       <h1 class="text-center"> Show all films</h1>
     <% end %>
   </div>
-  <div class="row">
+  <div class="row bg-action-movies">
     <div class="row">
-      <h2>Action movie</h2>
+      <h2 class="headers-text-properties">Action movies</h2>
     </div>
     <div class="row">
       <% @action_movies.each_with_index do |film| %>
           <div class="col">
             <%= link_to(film) do %>
               <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
-              <div class='col'><%= film.title %></div>
+              <div class='col headers-text-properties'><%= film.title %></div>
             <% end %>
           </div>
       <% end %>
     </div>
   </div>
-  <div class="row">
+  <div class="row bg-westerns">
     <div class="row">
-      <h2>Westerns</h2>
+      <h2 class="headers-text-properties">Westerns</h2>
     </div>
     <div class="row">
       <% @westerns.each_with_index do |film| %>
         <div class="col">
           <%= link_to(film) do %>
             <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
-            <div class='col'><%= film.title %></div>
+            <div class='col headers-text-properties'><%= film.title %></div>
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
-  <div class="row">
+  <div class="row bg-gangsters">
     <div class="row">
-      <h2>Gangsters</h2>
+      <h2 class="headers-text-properties">Gangsters</h2>
     </div>
     <div class="row">
       <% @gangsters.each_with_index do |film| %>
         <div class="col">
           <%= link_to(film) do %>
             <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
-            <div class='col'><%= film.title %></div>
+            <div class='col headers-text-properties'><%= film.title %></div>
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
-  <div class="row">
+  <div class="row bg-detectives">
     <div class="row">
-      <h2>Detectives</h2>
+      <h2 class="headers-text-properties">Detectives</h2>
     </div>
     <div class="row">
       <% @detectives.each_with_index do |film| %>
         <div class="col">
           <%= link_to(film) do %>
             <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" style="height:80%">
-            <div class='col'><%= film.title %></div>
+            <div class='col headers-text-properties'><%= film.title %></div>
           <% end %>
         </div>
       <% end %>
