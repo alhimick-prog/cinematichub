@@ -1,3 +1,16 @@
-<h1 class="text-center">
-  <%= @film.title %>
-</h1>
+<div class="container-fluid" style="background:#fadfad;">
+  <div class="row">
+    <div class="col-2">
+      <div class="row">
+        <img src=<%= asset_path("default_image4.png") %> class="img-fluid height-20">
+        <p class="text-center"><%= @film.release_date.year %></p>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="row"><h1 class="text-center"><%= @film.title %></h1></div>
+      <div class="row"><h4 class="border-3 border-bottom"><%= @film.description %></h4></div>
+      <div class="row"><p class="border-bottom">Duration: <%= @film.duration %></p></div>
+      <div class="row"><p class="border-bottom">Age restriction: <%= @film.age_restriction %></p></div>
+    </div>
+  </div>
+</div>

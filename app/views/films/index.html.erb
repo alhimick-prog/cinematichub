@@ -1,13 +1,13 @@
-<h1 class="text-center">List of films</h1>
-<div class="container">
-  <table class="table" bgcolor="#fadfad" height="100%">
+<div class="container-fluid" style="background:#fadfad;">
+  <div class="row"><h1 class="text-center">List of films</h1></div>
+  <table class="table" height="100%">
     <tbody>
       <% @films.each do |film| %>
         <tr>
           <td width="15%">
-            <div class="container height-20">
+            <div class="container">
               <%= link_to(film) do %>
-                <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid" height="80%" width="100%">
+                <img src=<%= "assets/default_image#{rand(0..4)}.png" %> class="img-fluid height-20">
                 <div class='col' height="20%"><%= film.title %></div>
               <% end %>
             </div>
