@@ -9,11 +9,5 @@ class HomeController < ApplicationController
     @westerns = Film.all.sample(@widget_size)
     @gangsters = Film.all.sample(@widget_size)
     @detectives = Film.all.sample(@widget_size)
-    @drama = Film.all.sample(@widget_size)
-    @history = Film.all.sample(@widget_size)
-    @comedy = Film.all.sample(@widget_size)
-    @melodramas = Film.all.sample(@widget_size)
-    @musicals = Film.all.sample(@widget_size)
-    @noir = Film.all.sample(@widget_size)
   end
 end
