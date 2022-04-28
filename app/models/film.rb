@@ -14,7 +14,7 @@
 class Film < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
-  validates :release_date, timeliness: { on_or_after: '01.01.1895', on_or_before: Date.today, type: :date }
+  validates :release_date, timeliness: { on_or_after: '01.01.1895', on_or_before: Time.zone.today, type: :date }
   validates :duration,
             presence: true,
             numericality: { only_integer: true, greater_than_or_equal_to: 3 }

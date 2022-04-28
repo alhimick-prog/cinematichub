@@ -1,4 +1,6 @@
-<div class="container-fluid" style="background:#fadfad;">
+<%= stylesheet_pack_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="container-fluid main-theme-background">
   <div class="row">
     <h1>Welcome to cinematichub</h1>
   </div>
@@ -13,64 +15,20 @@
       <h1 class="text-center"> Show all films</h1>
     <% end %>
   </div>
-  <div class="row bg-action-movies">
-    <div class="row">
-      <h2 class="headers-text-properties">Action movies</h2>
-    </div>
-    <div class="row">
-      <% @action_movies.each_with_index do |film| %>
-          <div class="col">
-            <%= link_to(film) do %>
-              <img src=<%= asset_path("default_image#{rand(0..4)}.png") %> class="img-fluid height-20">
-              <div class='col headers-text-properties'><%= film.title %></div>
-            <% end %>
-          </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="row bg-westerns">
-    <div class="row">
-      <h2 class="headers-text-properties">Westerns</h2>
-    </div>
-    <div class="row">
-      <% @westerns.each_with_index do |film| %>
-        <div class="col">
-          <%= link_to(film) do %>
-            <img src=<%= asset_path("default_image#{rand(0..4)}.png") %> class="img-fluid height-20">
-            <div class='col headers-text-properties'><%= film.title %></div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="row bg-gangsters">
-    <div class="row">
-      <h2 class="headers-text-properties">Gangsters</h2>
-    </div>
-    <div class="row">
-      <% @gangsters.each_with_index do |film| %>
-        <div class="col">
-          <%= link_to(film) do %>
-            <img src=<%= asset_path("default_image#{rand(0..4)}.png") %> class="img-fluid height-20">
-            <div class='col headers-text-properties'><%= film.title %></div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="row bg-detectives">
-    <div class="row">
-      <h2 class="headers-text-properties">Detectives</h2>
-    </div>
-    <div class="row">
-      <% @detectives.each_with_index do |film| %>
-        <div class="col">
-          <%= link_to(film) do %>
-            <img src=<%= asset_path("default_image#{rand(0..4)}.png") %> class="img-fluid height-20">
-            <div class='col headers-text-properties'><%= film.title %></div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'category_widget',
+      category_name: 'Action movies',
+      films_list: @action_movies,
+      background: 'action-movies' %>
+  <%= render 'category_widget',
+      category_name: 'Westerns',
+      films_list: @westerns,
+      background: 'westerns' %>
+  <%= render 'category_widget',
+      category_name: 'Gangsters',
+      films_list: @gangsters,
+      background: 'gangsters' %>
+  <%= render 'category_widget',
+      category_name: 'Detectives',
+      films_list: @detectives,
+      background: 'detectives' %>
 </div>
