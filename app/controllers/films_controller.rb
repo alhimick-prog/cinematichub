@@ -4,11 +4,7 @@ class FilmsController < ApplicationController
   end
 
   def show
-    unless Film.exists?(params[:id])
-      render file: Rails.root.join('public/404.html'), layout: false, status: :not_found
-      return
-    end
-
-    @film = Film.find(params[:id])
+    @film = Film.find_by(id: params[:id])
+    redirect_to controller: 'errors', action: 'show', id: '404' unless @film
   end
 end
