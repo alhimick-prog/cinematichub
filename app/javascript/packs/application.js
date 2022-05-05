@@ -8,9 +8,6 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
-import "../stylesheets/application"
-import "../stylesheets/home-page/_headers-style/home-page_headers-style"
-import "../stylesheets/home-page/_backgrounds/home-page_backgrounds"
 
 require.context('../images/', true)
 

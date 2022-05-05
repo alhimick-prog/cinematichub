@@ -1,14 +1,12 @@
-<%= stylesheet_pack_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
-
 <div class="container-fluid main-theme-background">
   <div class="row">
-    <h1>Welcome to cinematichub</h1>
+    <h1 class="text-center">Welcome to cinematichub</h1>
   </div>
   <div class="row">
-    <%= link_to 'Sign in', new_user_session_path %>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <%= link_to 'Edit profile', edit_user_registration_path %>
+    <div class="col"><%= link_to 'Sign in', new_user_session_path %></div>
+    <div class="col"><%= link_to 'Sign up', new_user_registration_path %></div>
+    <div class="col"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></div>
+    <div class="col"><%= link_to 'Edit profile', edit_user_registration_path %></div>
   </div>
   <div class="row">
     <%= link_to(films_path) do %>

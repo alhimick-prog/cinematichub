@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :films, only: [:index, :show]
-  get '/errors/:id', to: 'errors#show'
+  get '/errors/:id', '/errors', to: 'errors#show'
 end

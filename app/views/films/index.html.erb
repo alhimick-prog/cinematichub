@@ -7,7 +7,7 @@
           <td width="15%">
             <div class="container">
               <%= link_to(film) do %>
-                <img src=<%= asset_path("default_image#{rand(0..4)}.png") %> class="img-fluid height-20">
+                <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
                 <div class='col' height="20%"><%= film.title %></div>
               <% end %>
             </div>

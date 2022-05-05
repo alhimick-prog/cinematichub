@@ -1,13 +1,13 @@
 <div class="row home-page_background_<%= background %>">
 <div class="row">
-  <h2 class="home-page_headers-style_white-bold"><%= category_name %></h2>
+  <h2 class="home-page_headers-style"><%= category_name %></h2>
 </div>
 <div class="row">
   <% films_list.each do |film| %>
       <div class="col">
         <%= link_to(film) do %>
           <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
-          <div class="col home-page_headers-style_white-bold"><%= film.title %></div>
+          <div class="col home-page_headers-style"><%= film.title %></div>
         <% end %>
       </div>
   <% end %>
