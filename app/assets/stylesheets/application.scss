@@ -16,3 +16,14 @@ $main_color:#fadfad;
     color: $main_color;
   }
 }
+
+.emblem {
+  &-size {
+  width: 56px;
+  height: 42px;
+  }
+  &-text {
+    color: white;
+    font-weight: bold;
+  }
+}
