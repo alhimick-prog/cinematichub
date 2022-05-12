@@ -15,11 +15,15 @@ $main_color: #fadfad;
 
 .emblem {
   &-size {
-  width: 56px;
-  height: 42px;
+    width: 56px;
+    height: 42px;
+    &_mini {
+      width: 48px;
+      height: 36px;
+    }
   }
   &-text {
-    color: white;
+    color: black;
     font-weight: bold;
   }
 }
