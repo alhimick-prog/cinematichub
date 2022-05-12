@@ -1,0 +1,21 @@
+<div class="container-fluid main-theme-background">
+  <div class="row"><h1 class="text-center">List of films</h1></div>
+  <table class="table" height="100%">
+    <tbody>
+      <% @films.each do |film| %>
+        <tr>
+          <td width="15%">
+            <div class="row">
+              <%= link_to(film) do %>
+                <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
+                <div class='col' height="20%"><%= film.title %></div>
+              <% end %>
+            </div>
+          </td>
+          <td width="10%"><%= film.release_date.year %></td>
+          <td width="75%"><%= film.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

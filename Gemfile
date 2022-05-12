@@ -14,10 +14,11 @@ gem 'pg', '~> 1.3', '>= 1.3.5'
 gem 'puma', '~> 5.0'
 gem 'pundit', '~> 2.2'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
+gem 'rails_admin', '~> 3.0'
 gem 'sass-rails', '>= 6'
 gem 'simple_form', '~> 5.1'
 gem 'turbolinks', '~> 5'
-gem 'validates_timeliness', '~> 5.0'
+gem 'validates_timeliness', '~> 6.0.0.beta2'
 gem 'webpacker', '~> 5.0'
 
 gem 'bootsnap', '>= 1.4.4', require: false

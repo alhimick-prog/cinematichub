@@ -1,0 +1,29 @@
+$main_color: #fadfad;
+
+.height-20 {
+  height: 20vh;
+}
+
+.main-theme {
+  &-background {
+    background: $main_color;
+  }
+  &-color {
+    color: $main_color;
+  }
+}
+
+.emblem {
+  &-size {
+    width: 56px;
+    height: 42px;
+    &_mini {
+      width: 48px;
+      height: 36px;
+    }
+  }
+  &-text {
+    color: black;
+    font-weight: bold;
+  }
+}
