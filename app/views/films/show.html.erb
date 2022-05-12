@@ -1,0 +1,16 @@
+<div class="container-fluid main-theme-background">
+  <div class="row">
+    <div class="col-2">
+      <div class="row">
+      <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
+        <p class="text-center"><%= @film.release_date.year %></p>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="row"><h1 class="text-center"><%= @film.title %></h1></div>
+      <div class="row"><h4><%= @film.description %></h4></div>
+      <div class="row"><p>Duration: <%= @film.duration %></p></div>
+      <div class="row"><p>Age restriction: <%= @film.age_restriction %></p></div>
+    </div>
+  </div>
+</div>
