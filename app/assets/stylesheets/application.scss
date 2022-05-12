@@ -1,29 +1,7 @@
-//= require_tree ../stylesheets
+/* ...
+  *= require_self
+  *= require global_style
+  *= require home/index
+*/
 
 @import "bootstrap/scss/bootstrap";
-
-$main_color:#fadfad;
-
-.height-20 {
-  height: 20vh;
-}
-
-.main-theme {
-  &-background {
-    background: $main_color;
-  }
-  &-color {
-    color: $main_color;
-  }
-}
-
-.emblem {
-  &-size {
-  width: 56px;
-  height: 42px;
-  }
-  &-text {
-    color: white;
-    font-weight: bold;
-  }
-}

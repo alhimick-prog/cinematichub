@@ -5,7 +5,7 @@
       <% @films.each do |film| %>
         <tr>
           <td width="15%">
-            <div class="container">
+            <div class="row">
               <%= link_to(film) do %>
                 <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
                 <div class='col' height="20%"><%= film.title %></div>

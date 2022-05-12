@@ -1,6 +1,2 @@
 //= link_tree ../images
-//= link_directory ../stylesheets .css
-//= link_directory ../stylesheets .scss
-//= link application.scss
-
-import "bootstrap"
+//= link_tree ../stylesheets .css
