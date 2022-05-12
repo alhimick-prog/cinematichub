@@ -5,7 +5,7 @@
 <div class="row">
   <% films_list.each do |film| %>
       <div class="col">
-        <%= link_to(film) do %>
+        <%= link_to(film, {class: 'home-page_headers-style'}) do %>
           <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
           <div class="col home-page_headers-style"><%= film.title %></div>
         <% end %>
