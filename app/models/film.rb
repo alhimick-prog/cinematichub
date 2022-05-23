@@ -21,4 +21,7 @@ class Film < ApplicationRecord
   validates :age_restriction,
             presence: true,
             numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 21 }
+
+  has_one_attached :main_image
+  has_many_attached :images
 end

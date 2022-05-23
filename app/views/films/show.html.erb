@@ -2,7 +2,11 @@
   <div class="row">
     <div class="col-2">
       <div class="row">
-      <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
+        <% if @film.main_image.representable? %>
+          <%= image_tag(@film.main_image.representation(resize_to_limit: [100, 100]), class: 'img-fluid height-20') %>
+        <% else %>
+          <%= image_tag('default_image3.png', class: 'img-fluid height-20') %>
+        <% end %>
         <p class="text-center"><%= @film.release_date.year %></p>
       </div>
     </div>
@@ -11,6 +15,20 @@
       <div class="row"><h4><%= @film.description %></h4></div>
       <div class="row"><p>Duration: <%= @film.duration %></p></div>
       <div class="row"><p>Age restriction: <%= @film.age_restriction %></p></div>
+      <div class="row">
+        <p>Screenshotes:</p>
+        <div class="container">
+          <div class="row">
+            <% @film.images.each do |image| %>
+              <% if image.representable? %>
+                <div class="col">
+                  <%= image_tag(image.representation(resize_to_limit: [100, 100]), class: 'img-fluid height-20') %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

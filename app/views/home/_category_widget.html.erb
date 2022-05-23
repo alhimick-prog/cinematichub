@@ -6,7 +6,11 @@
   <% films_list.each do |film| %>
       <div class="col">
         <%= link_to(film, {class: 'home-page_headers-style'}) do %>
-          <%= image_tag("default_image#{rand(0..4)}.png", class: 'img-fluid height-20') %>
+          <% if film.main_image.representable? %>
+            <%= image_tag(film.main_image.representation(resize_to_limit: [100, 100]), class: 'img-fluid height-20') %>
+          <% else %>
+            <%= image_tag('default_image3.png', class: 'img-fluid height-20') %>
+          <% end %>
           <div class="col home-page_headers-style"><%= film.title %></div>
         <% end %>
       </div>
