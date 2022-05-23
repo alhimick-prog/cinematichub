@@ -10,7 +10,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="main-theme-background">
+    <%= render 'layouts/header' %>
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-info">
+        <%= msg %>
+      </div>
+    <% end %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
