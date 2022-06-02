@@ -1,0 +1,21 @@
+.home-page {
+  &_background {
+    &_action-movies {
+      background: no-repeat center/100% asset_url('bg_action_movies001.png');
+    }
+    &_westerns {
+      background: no-repeat center/100% asset_url('bg_westerns000.png');
+    }
+    &_gangsters {
+      background: no-repeat center/100% asset_url('bg_gangsters000.png');
+    }
+    &_detectives {
+      background: no-repeat center/100% asset_url('bg_detectives001.png');
+    }
+  }
+  &_headers-style {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}

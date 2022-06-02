@@ -21,4 +21,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   enum role: { admin: 0, editor: 1, subscriber: 2 }
+
+  has_one_attached :avatar
 end
